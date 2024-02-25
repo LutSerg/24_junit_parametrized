@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.asteroster'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter:5.10.0',
+            'com.codeborne:selenide:6.19.1',
+            'org.slf4j:slf4j-reload4j:2.0.6'
+    )
+}
+
+test {
+    useJUnitPlatform{
+        includeTags 'muztorg', 'goodguitars'
+    }
+}
